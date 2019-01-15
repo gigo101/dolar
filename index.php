@@ -51,9 +51,24 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
+                           <li>
+                           <a href="">
+                               Register
+                            </a>
+                        </li>
+                          <li>
+                           <a href="">
+                               Login
+                            </a>
+                        </li>
+                         <li>
+                           <a href="">
+                               Services
+                            </a>
+                        </li>
                         <li>
                            <a href="">
-                               Account
+                               Contact
                             </a>
                         </li>
                     </ul>
@@ -65,7 +80,7 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-
+                    fdff
                 </div>
             </div>
         </div>
