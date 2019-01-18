@@ -15,9 +15,27 @@
 
 .main1{
 	margin-top: -20px;
+	min-height:100%;
+	background:linear-gradient(0deg,rgba(149, 68, 170,0.6),rgba(199, 87, 162,0.4)),url(https://images.pexels.com/photos/209234/pexels-photo-209234.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+	background-size:cover;
 }
 
 .req-pickup{
 	margin-top: 50px!important; 
 	font-size: 20px;
+}
+
+.covered-area{
+	text-align: center;
+	font-weight: bold;
+	color: #000;
+}
+
+.row2{
+	margin-top: 40px;
+}
+
+.services-tagline
+{
+	color: #fff;
 }
