@@ -76,26 +76,36 @@
     <div class="container">
       <h1 class="display-3 company-heading">Dolar Outsourcing</h1>
       <p class="headline">Your trusted logistics solutions provider.</p>
-      <button class="btn btn-info req-pickup center-block" data-toggle="modal" data-target="#exampleModal">REQUEST A PICKUP</button>
+      <button class="btn btn-info req-pickup center-block" data-toggle="modal" data-target="#loginModal">REQUEST A PICKUP</button>
 
     </div>
 
 <!-- Request a Pickup Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="loginModal">Login / Signup</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" class="form-control" placeholder="Username">
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" placeholder="Password">
+        </div>
+
+        <p>Don't have an account? <a href="#"><span id="registertxt" style="font-weight: bold;">Register</span></a></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="save">Save changes</button>
+        <button type="button" class="btn btn-primary" id="save">Login</button>
       </div>
     </div>
   </div>
@@ -103,17 +113,26 @@
 
 
 <!-- TEst Modal -->
-<div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="testModalLabel" aria-hidden="true">
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="testModalLabel">TEst modal</h5>
+        <h5 class="modal-title" id="registerModalLabel">Register</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        ...
+      <div class="modal-body">   
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" class="form-control" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" placeholder="Password">
+        </div>
+
+        <p>Don't have an account? <a href="#"><span id="registertxt" style="font-weight: bold;">Register</span></a></p>        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -223,34 +242,6 @@
 	<script src="assets/js/demo.js"></script>
 
   <!-- Custom JS Scripts-->
-  <script type="text/javascript"> 
-    $('document').ready(function(){
-
-      /*
-      $("#save").click(function(){
-            $("#save").attr("data-dismiss","modal");
-            $('#exampleModal').modal('hide');
-            $('#testModal').modal('show'); 
-      });
-      
-      */
-      
-      $('#save').click(function(e){
-          e.preventDefault();
-
-          $('#exampleModal')
-              .modal('hide')
-              .on('hidden.bs.modal', function (e) {
-                  $('#testModal').modal('show');
-
-                  $(this).off('hidden.bs.modal'); // Remove the 'on' event binding
-              });
-
-      });
-
-    });
-
-
-  </script>
+  <script src="javascripts/customjs.js"></script>
 
 </html>
