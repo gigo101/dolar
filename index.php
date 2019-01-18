@@ -27,7 +27,6 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-    
 </head>
 <body>
 
@@ -81,7 +80,7 @@
 
     </div>
 
-<!-- Modal -->
+<!-- Request a Pickup Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -102,6 +101,27 @@
   </div>
 </div>
 
+
+<!-- TEst Modal -->
+<div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="testModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="testModalLabel">TEst modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="save">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container row2">
   <!-- Example row of columns -->
   <div class="row">
@@ -183,14 +203,7 @@
 
 </body>
 
-  <script type="text/javascript"> 
-
-    $("#save").click(function(){
-        $("#save").attr("data-dismiss","modal");
-    });
-      
-  </script>
-    <!--   Core JS Files   -->
+  <!--   Core JS Files   -->
   <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 
@@ -209,5 +222,35 @@
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
 
+  <!-- Custom JS Scripts-->
+  <script type="text/javascript"> 
+    $('document').ready(function(){
+
+      /*
+      $("#save").click(function(){
+            $("#save").attr("data-dismiss","modal");
+            $('#exampleModal').modal('hide');
+            $('#testModal').modal('show'); 
+      });
+      
+      */
+      
+      $('#save').click(function(e){
+          e.preventDefault();
+
+          $('#exampleModal')
+              .modal('hide')
+              .on('hidden.bs.modal', function (e) {
+                  $('#testModal').modal('show');
+
+                  $(this).off('hidden.bs.modal'); // Remove the 'on' event binding
+              });
+
+      });
+
+    });
+
+
+  </script>
 
 </html>
