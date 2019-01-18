@@ -8,13 +8,13 @@ $('document').ready(function(){
       
       */
 
-      $('#save').click(function(e){
+      $('#registertxt').click(function(e){
           e.preventDefault();
 
-          $('#exampleModal')
+          $('#loginModal')
               .modal('hide')
               .on('hidden.bs.modal', function (e) {
-                  $('#testModal').modal('show');
+                  $('#registerModal').modal('show');
 
                   $(this).off('hidden.bs.modal'); // Remove the 'on' event binding
               });
