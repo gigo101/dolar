@@ -122,7 +122,11 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">   
+      <div class="modal-body"> 
+        <div class="form-group">
+          <label>Company/Customer Name</label>
+          <input type="text" class="form-control" placeholder="Company/Customer Name">
+        </div>  
         <div class="form-group">
           <label>Username</label>
           <input type="text" class="form-control" placeholder="Username">
@@ -131,8 +135,18 @@
           <label>Password</label>
           <input type="password" class="form-control" placeholder="Password">
         </div>
-
-        <p>Don't have an account? <a href="#"><span id="registertxt" style="font-weight: bold;">Register</span></a></p>        
+        <div class="form-group">
+          <label>Repeat Password</label>
+          <input type="password" class="form-control" placeholder="Repeat Password">
+        </div>
+         <div class="form-group">
+          <label>Contact Number</label>
+          <input type="text" class="form-control" placeholder="Contact Number">
+        </div>
+        <div class="form-group">
+          <label>Address</label>
+          <input type="text" class="form-control" placeholder="Address">
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
