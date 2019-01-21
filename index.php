@@ -122,35 +122,40 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form id="registerCustomer">
       <div class="modal-body"> 
         <div class="form-group">
           <label>Company/Customer Name</label>
-          <input type="text" class="form-control" placeholder="Company/Customer Name">
+          <input type="text" class="form-control" placeholder="Company/Customer Name" required>
         </div>  
         <div class="form-group">
           <label>Username</label>
-          <input type="text" class="form-control" placeholder="Username">
+          <input type="text" class="form-control" placeholder="Username" name="username" required>
         </div>
         <div class="form-group">
           <label>Password</label>
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password" name="password" required>
         </div>
         <div class="form-group">
           <label>Repeat Password</label>
-          <input type="password" class="form-control" placeholder="Repeat Password">
+          <input type="password" class="form-control" placeholder="Repeat Password" required>
         </div>
          <div class="form-group">
           <label>Contact Number</label>
-          <input type="text" class="form-control" placeholder="Contact Number">
+          <input type="text" class="form-control" placeholder="Contact Number" name="contactNumber" required>
         </div>
         <div class="form-group">
           <label>Address</label>
-          <input type="text" class="form-control" placeholder="Address">
+          <input type="text" class="form-control" placeholder="Address" name="address" required>
         </div>
+        <input style="width: 400px;" type="submit" name="" value="Save" class="btn btn-primary" id="submit">
+
+        <button style="width: 400px;" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="save">Save changes</button>
+        <button type="button" class="btn btn-primary" id="saveCustomer">Save changes</button>
       </div>
     </div>
   </div>
@@ -233,7 +238,6 @@
     </div>
 </div>
 
-
 </body>
 
   <!--   Core JS Files   -->
@@ -257,5 +261,39 @@
 
   <!-- Custom JS Scripts-->
   <script src="javascripts/customjs.js"></script>
+
+  <script type="text/javascript">
+    /*
+      $('form').on('submit', function (e) {
+
+          e.preventDefault();
+
+          $.ajax({
+            type: 'post',
+            url: 'index.php',
+            data: $('form').serialize(),
+            success: function () {
+              alert('form was submitted');
+            }
+          });
+
+        });
+    
+  */
+  
+  $('#registerCustomer').on('submit',function(e) {
+  $.ajax({
+          type: "post",
+          url: "insert_customer.php",
+          data: $('#registerCustomer').serialize(),
+
+         success: function(){
+              alert('Data Save');
+         }
+});
+ });
+ 
+
+  </script>
 
 </html>
