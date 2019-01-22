@@ -148,14 +148,10 @@
           <label>Address</label>
           <input type="text" class="form-control" placeholder="Address" name="address" required>
         </div>
-        <input style="width: 400px;" type="submit" name="" value="Save" class="btn btn-primary" id="submit">
+        <input style="width: 150px;" type="submit" name="" value="Save" class="btn btn-primary" id="submit">
 
-        <button style="width: 400px;" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button style="width: 150px;" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="saveCustomer">Save changes</button>
       </div>
     </div>
   </div>
