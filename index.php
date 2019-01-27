@@ -291,6 +291,10 @@
  });
  
 
+$("form").on('submit',function(e){
+        alert("Form submitted");
+
+    });
   </script>
 <!--
   PADI (~_~)
