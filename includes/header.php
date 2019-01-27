@@ -46,12 +46,12 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                            <li>
-                           <a href="">
+                           <a href="#" data-toggle="modal" data-target="#registerModal">
                                Register
                             </a>
                         </li>
                           <li>
-                           <a href="">
+                           <a href="#" data-toggle="modal" data-target="#loginModal">>
                                Login
                             </a>
                         </li>
