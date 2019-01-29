@@ -51,7 +51,7 @@
                             </a>
                         </li>
                           <li>
-                           <a href="#" data-toggle="modal" data-target="#loginModal">>
+                           <a href="#" data-toggle="modal" data-target="#loginModal">
                                Login
                             </a>
                         </li>
