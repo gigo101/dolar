@@ -45,19 +45,18 @@ $('#registerCustomer').on('submit',function(e) {
           data: $('#registerCustomer').serialize(),
 
          success: function(){
-              alert('Data Save');
+             alert('Data Save');
          }
     });
  });
  
 
-/* display message after form is submitted
-
+/*
 $("form").on('submit',function(e){
         alert("Form submitted");
 
 });
 
-
 */
+
 
