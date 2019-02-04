@@ -68,11 +68,11 @@
         </div>
         <div class="form-group">
           <label>Password</label>
-          <input type="password" class="form-control" placeholder="Password" name="password" required>
+          <input type="password" class="form-control" placeholder="Password" name="password" id="pass" required>
         </div>
         <div class="form-group">
           <label>Repeat Password</label>
-          <input type="password" class="form-control" placeholder="Repeat Password" required>
+          <input type="password" class="form-control" placeholder="Repeat Password" name="repeatpass" id="repeatpass" required>
         </div>
          <div class="form-group">
           <label>Contact Number</label>
