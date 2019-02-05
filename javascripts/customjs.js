@@ -60,3 +60,16 @@ $("form").on('submit',function(e){
 */
 
 
+$("#repeatpass").focusout(function(){
+
+    var pass=$("#pass").val();
+    var repeatpass=$("#repeatpass").val();
+
+    if(pass!=repeatpass){
+      alert("Password did not match!");
+    }
+    
+
+});
+
+
