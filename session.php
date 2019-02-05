@@ -14,7 +14,6 @@
    
    if(!isset($_SESSION['login_user'])){
       header("location:user-login.php");
-      //echo $login_session;
       die();
    }
 ?>
