@@ -24,23 +24,25 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form id="loginCustomer">
       <div class="modal-body">
         <div class="form-group">
           <label>Username</label>
-          <input type="text" class="form-control" placeholder="Username">
+          <input type="text" class="form-control" placeholder="Username" name="username">
         </div>
 
         <div class="form-group">
           <label>Password</label>
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password" name="password">
         </div>
 
         <p>Don't have an account? <a href="#"><span id="registertxt" style="font-weight: bold;">Register</span></a></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="save">Login</button>
+        <input type="submit" class="btn btn-primary" id="login" value="Login">
       </div>
+      </form>
     </div>
   </div>
 </div>
