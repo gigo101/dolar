@@ -50,7 +50,18 @@ $('#registerCustomer').on('submit',function(e) {
     });
  });
  
+//Login Ajax
+$('#loginCustomer').on('submit',function(e) {
+  $.ajax({
+          type: "post",
+          url: "user-login.php",
+          data: $('#loginCustomer').serialize(),
 
+         success: function(){
+             alert('Login');
+         }
+    });
+ });
 /*
 $("form").on('submit',function(e){
         alert("Form submitted");
