@@ -45,7 +45,11 @@
 	<script src="assets/js/demo.js"></script>
 
   <!-- Custom JS Scripts-->
-  <script src="javascripts/customjs.js"></script>
+  <script src="javascripts/customjs.js">
+    
+
+
+  </script>
 <!--
   PADI (~_~)
 !-->
