@@ -51,17 +51,58 @@ $('#registerCustomer').on('submit',function(e) {
  });
  
 //Login Ajax
-$('#loginCustomer').on('submit',function(e) {
-  $.ajax({
-          type: "post",
-          url: "user-login.php",
-          data: $('#loginCustomer').serialize(),
 
-         success: function(){
-             alert('Login');
-         }
-    });
+$('#loginCustomer').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+       type: "POST",
+       url: 'user-login.php',
+       data: $(this).serialize(),
+       success: function(data)
+       {
+     
+            window.location = 'user-login.php';
+
+       }
+   });
  });
+
+//jax login new
+
+$('#login_button').click(function(e) {
+    var username=$('#username').val();
+    var password=$('#password').val();
+
+    if(username !='' && password !=''){
+        $.ajax({
+
+            url: "action.php",
+            method: "POST",
+            data: {username:username, password:password},
+            success: function(data){
+
+                if(data =='No'){
+                    alert("Wrong Data");
+                }
+                else{
+                  $('#loginModal').hide();
+                  location.reload();
+                   alert("Login successful")
+                   window.location = 'user-dashboard.php';
+                }
+                
+            }
+
+        });
+    }
+
+    else{
+      alert('Username and password are required!');
+    }
+
+});
+
+
 /*
 $("form").on('submit',function(e){
         alert("Form submitted");
