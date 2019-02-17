@@ -2,6 +2,6 @@
    session_start();
    
    if(session_destroy()) {
-      header("Location: user-login.php");
+      header("Location: index.php");
    }
 ?>
