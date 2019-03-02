@@ -50,7 +50,7 @@ $('#registerCustomer').on('submit',function(e) {
     });
  });
  
-//Login Ajax
+//Login Ajax Old
 
 $('#loginCustomer').submit(function(e) {
     e.preventDefault();
@@ -67,7 +67,7 @@ $('#loginCustomer').submit(function(e) {
    });
  });
 
-//jax login new
+//ajax login new
 
 $('#login_button').click(function(e) {
     var username=$('#username').val();
@@ -89,6 +89,42 @@ $('#login_button').click(function(e) {
                   location.reload();
                    alert("Login successful")
                    window.location = 'user-dashboard.php';
+                }
+                
+            }
+
+        });
+    }
+
+    else{
+      alert('Username and password are required!');
+    }
+
+});
+
+
+//ajax admin login new
+
+$('#admin_login_button').click(function(e) {
+    var username=$('#username').val();
+    var password=$('#password').val();
+
+    if(username !='' && password !=''){
+        $.ajax({
+
+            url: "action-admin.php",
+            method: "POST",
+            data: {username:username, password:password},
+            success: function(data){
+
+                if(data =='No'){
+                    alert("Wrong Data");
+                }
+                else{
+                  $('#loginModal').hide();
+                  location.reload();
+                   alert("Login successful")
+                   window.location = 'admin-dashboard.php';
                 }
                 
             }
