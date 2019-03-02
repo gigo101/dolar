@@ -14,7 +14,7 @@
    //$_SESSION["username"] = $_POST["username"];
 
    if(!isset($_SESSION['username'])){
-      header("index.php");
+      header("Location: index.php");
       die();
    }
 ?>
