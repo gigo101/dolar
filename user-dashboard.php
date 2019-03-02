@@ -378,7 +378,6 @@
                                         </tbody>
                                     </table>
                                 </div>
-
                                 <div class="footer">
                                     <hr>
                                     <div class="stats">
